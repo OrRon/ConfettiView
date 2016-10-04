@@ -1,0 +1,16 @@
+PODS:
+  - ConfettiView (0.1.0)
+
+DEPENDENCIES:
+  - ConfettiView (from `../`)
+
+EXTERNAL SOURCES:
+  ConfettiView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ConfettiView: 1959e7aa33f0745a76f2f43e3e533d0472fb9add
+
+PODFILE CHECKSUM: 68331678926b3821e9ee846c2ba8dc9492c83bd6
+
+COCOAPODS: 1.0.1
