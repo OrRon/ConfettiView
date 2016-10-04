@@ -8,7 +8,9 @@
 
 
 Confetti View lets you create a magnificent confetti view in your app. This was inspired by [House Party](https://itunes.apple.com/il/app/houseparty-group-video-chat/id1065781769?mt=8) app's login screen.
+
 ![](http://i.giphy.com/d31wQ2wbLGRQKtTa.gif)
+
 It reacts to the phone accelerometer therefore it's better to run the example project on the device.
 
 ## Usage
