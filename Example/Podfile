@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ConfettiView_Example' do
+  pod 'ConfettiView', :path => '../'
+
+  target 'ConfettiView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
