@@ -1,7 +1,6 @@
 
-# ConfettiView
+![](http://i.imgur.com/kQqv0mb.png)
 
-[![CI Status](http://img.shields.io/travis/Or Ron/ConfettiView.svg?style=flat)](https://travis-ci.org/Or Ron/ConfettiView)
 [![Version](https://img.shields.io/cocoapods/v/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
 [![License](https://img.shields.io/cocoapods/l/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/)

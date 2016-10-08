@@ -60,15 +60,15 @@ class ConfettiLayer {
     }
     
     func setupTimerLoop() {
-        if #available(iOS 10.0, *) {
-            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                self.randomlyAddParticle()
-                if let accelerometerData = self.motionManager.accelerometerData {
-                    self.updateCurrentState(accelerometerData)
-                }
-            }
-        } else {
-            // Fallback on earlier versions
+        
+        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.onTimeTic), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func onTimeTic()  {
+        self.randomlyAddParticle()
+        if let accelerometerData = self.motionManager.accelerometerData {
+            self.updateCurrentState(accelerometerData)
         }
     }
     

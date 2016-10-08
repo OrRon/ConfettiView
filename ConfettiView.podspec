@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ConfettiView'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'Add a magnificent Confetti to any view in your app'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/orron/ConfettiView.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/or_ron'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.1'
 
   s.source_files = 'ConfettiView/Classes/**/*'
   

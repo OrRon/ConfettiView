@@ -17,25 +17,26 @@ enum ShapeType {
         }
     }
     
-    case circle
-    case triangle
-    case square
+    case Circle
+    case Triangle
+    case Square
+    case Squigle
     
     func getDrawfunction() -> ((CGRect,UIColor)->()) {
         switch self {
-        case .circle:
+        case .Circle:
             return { rect,color in
                 let path = UIBezierPath(ovalIn: rect)
                 color.setFill()
                 path.fill()
             }
-        case .square:
+        case .Square:
             return { rect,color in
                 let path = UIBezierPath(rect: rect)
                 color.setFill()
                 path.fill()
             }
-        case .triangle:
+        case .Triangle:
             return { rect,color in
                 let path = UIBezierPath()
                 path.move(to: CGPoint(x:0, y: rect.size.width))
@@ -45,13 +46,24 @@ enum ShapeType {
                 color.setFill()
                 path.fill()
             }
+        case .Squigle:
+            return { rect,color in
+                let path = UIBezierPath()
+                path.move(to: CGPoint(x:5, y: 5))
+                path.addCurve(to: CGPoint(x:rect.size.width-5,y:rect.size.width-5),
+                              controlPoint1: CGPoint(x:0,y:rect.size.width),
+                              controlPoint2: CGPoint(x:rect.size.width,y:0))
+                path.lineWidth = 2.0
+                color.setStroke()
+                path.stroke()
+            }
         }
     }
     func getRandomColor() -> UIColor {
         return possibleColors.randomElement()!
     }
     static func random()-> ShapeType {
-        return [ShapeType.circle,ShapeType.square,.triangle].randomElement()!
+        return [ShapeType.Circle,ShapeType.Square,.Triangle,.Squigle].randomElement()!
     }
 }
 
