@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ConfettiExample
+
 
 class ConfettiExampleTests: XCTestCase {
     

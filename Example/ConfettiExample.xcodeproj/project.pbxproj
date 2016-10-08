@@ -243,17 +243,20 @@
 					2CF80EF61DA456B20044B27F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KX2Q423DM4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					2CF80F0A1DA456B20044B27F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KX2Q423DM4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2CF80EF61DA456B20044B27F;
 					};
 					2CF80F151DA456B20044B27F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = KX2Q423DM4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2CF80EF61DA456B20044B27F;
 					};

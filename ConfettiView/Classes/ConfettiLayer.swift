@@ -64,7 +64,7 @@ class ConfettiLayer {
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
                 self.randomlyAddParticle()
                 if let accelerometerData = self.motionManager.accelerometerData {
-                    self.updateCurrentState(accelerometerData: accelerometerData)
+                    self.updateCurrentState(accelerometerData)
                 }
             }
         } else {
@@ -72,7 +72,7 @@ class ConfettiLayer {
         }
     }
     
-    func updateCurrentState(accelerometerData:CMAccelerometerData)  {
+    func updateCurrentState(_ accelerometerData:CMAccelerometerData)  {
         self.totalTilt = -accelerometerData.acceleration.y
         self.calculatedVelocity = CGPoint(x: self.baseVelocity.x + CGFloat(accelerometerData.acceleration.x * 200 / self.depth), y:  CGFloat(-accelerometerData.acceleration.y*300 / self.depth))
         self.itemBehavior.items.forEach{ item in
