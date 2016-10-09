@@ -6,8 +6,9 @@
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/)
 [![Platform](https://img.shields.io/cocoapods/p/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
 
+# ConfettiView
 
-Confetti View lets you create a magnificent confetti view in your app. This was inspired by [House Party](https://itunes.apple.com/il/app/houseparty-group-video-chat/id1065781769?mt=8) app's login screen.
+Confetti View lets you create a magnificent confetti view in your app. This was inspired by [House Party](https://itunes.apple.com/il/app/houseparty-group-video-chat/id1065781769?mt=8) app's login screen. Written in Swift 3 :)
 
 ![](http://i.giphy.com/d31wQ2wbLGRQKtTa.gif)
 
