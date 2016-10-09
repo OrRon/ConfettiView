@@ -17,7 +17,7 @@ It reacts to the phone accelerometer therefore it's better to run the example pr
 ## Usage
 
 ### With Interface Builder
-
+![](http://i.imgur.com/Myg6obo.png)
 Simply pick a view and change it's type to ConfettiView.
 
 ### Programaticlly
