@@ -13,10 +13,15 @@ import CoreMotion
 class ConfettiLayer {
     
     let view:UIView
+    
+    
     var animator:UIDynamicAnimator
     var itemBehavior = UIDynamicItemBehavior()
     var motionManager = CMMotionManager()
     var collisions = UICollisionBehavior()
+    
+    
+    
     var baseVelocity = CGPoint(x:0,y:200.0)
     var calculatedVelocity:CGPoint
     var totalTilt = 1.0

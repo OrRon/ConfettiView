@@ -10,7 +10,7 @@ import UIKit
 
 class ConfettiView: UIView {
 
-    
+    // MARK: Declarations
     var confettiLayers = [ConfettiLayer]()
     
     override var bounds: CGRect {
@@ -18,6 +18,8 @@ class ConfettiView: UIView {
             confettiLayers.forEach { layer in layer.resetBounderies() }
         }
     }
+    
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,12 +33,24 @@ class ConfettiView: UIView {
     }
     
     
-    
+    // MARK: Confetti Methods
     func addConfetti() {
         self.confettiLayers.append(ConfettiLayer(view: self))
         self.confettiLayers.append(ConfettiLayer(view: self, depth: 1.5))
         self.confettiLayers.append(ConfettiLayer(view: self, depth: 2))
     }
+    
+    
+    // MARK: Touches
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
+    
+    
     
     
 }
