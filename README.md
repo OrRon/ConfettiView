@@ -42,7 +42,7 @@ pod "ConfettiView"
 
 ## Author
 
-Or Ron, or.ron10-at-gmail.com
+Or Ron, or.ron10@gmail.com
 
 ## License
 
