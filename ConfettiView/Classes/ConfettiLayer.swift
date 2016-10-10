@@ -72,18 +72,26 @@ class ConfettiLayer {
     
     @objc func onTimeTic()  {
         self.randomlyAddParticle()
-        if let accelerometerData = self.motionManager.accelerometerData {
-            self.updateCurrentState(accelerometerData)
-        }
+        
+        self.updateCurrentState(self.motionManager.accelerometerData)
+        
     }
     
-    func updateCurrentState(_ accelerometerData:CMAccelerometerData)  {
-        self.totalTilt = -accelerometerData.acceleration.y
-        self.calculatedVelocity = CGPoint(x: self.baseVelocity.x + CGFloat(accelerometerData.acceleration.x * 200 / self.depth), y:  CGFloat(-accelerometerData.acceleration.y*300 / self.depth))
+    func updateCurrentState(_ accelerometerData:CMAccelerometerData?)  {
+        print(self.view.subviews.count)
+        //Calculating the new velocity of the items according to the tilt of the device
+        if let accelerometerData = accelerometerData {
+            self.totalTilt = -accelerometerData.acceleration.y
+            self.calculatedVelocity = CGPoint(x: self.baseVelocity.x + CGFloat(accelerometerData.acceleration.x * 200 / self.depth), y:  CGFloat(-accelerometerData.acceleration.y*300 / self.depth))
+        }
         self.itemBehavior.items.forEach{ item in
+            
+            //Changing the item's speed
             let vel = self.itemBehavior.linearVelocity(for: item)
             let delta = CGPoint(x:self.calculatedVelocity.x - vel.x,y:self.calculatedVelocity.y - vel.y)
             self.itemBehavior.addLinearVelocity(delta, for: item)
+            
+            //Checking if if the item needs to be released
             if let view = item as? UIView {
                 if view.frame.origin.y > self.view.frame.size.height {
                     self.collisions.removeItem(item)
