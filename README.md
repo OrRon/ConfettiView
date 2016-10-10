@@ -29,7 +29,20 @@ ConfettiView is a subclass of UIView
 let confettiView = ConffetiView()
 self.view.addSubView(confettiView)
 ```
+### Controls
 
+Start or stop the animation:
+```swift
+confettiView.stopAnimating()
+confettiView.startAnimating()
+```
+
+Check weather the animation is active:
+```swift
+confettiView.isAnimating
+```
+
+By default the animation starts when the view is initialized
 
 ## Installation
 

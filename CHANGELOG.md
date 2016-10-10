@@ -5,6 +5,7 @@ All notable changes to this project will be documentd in this file.
 ### Added
 - Stop and Start animation methods
 - Added var which indicates weather the view is animated
+- Example project shows support for start and stop
 
 ### Fixed
 - Fixed a minor bug when running on a simulator
