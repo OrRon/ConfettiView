@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ConfettiView: UIView {
+open class ConfettiView: UIView {
 
+    open var isAnimating = true
+    
     // MARK: Declarations
     var confettiLayers = [ConfettiLayer]()
     
-    override var bounds: CGRect {
+    override open var bounds: CGRect {
         didSet {
             confettiLayers.forEach { layer in layer.resetBounderies() }
         }
@@ -27,14 +29,14 @@ class ConfettiView: UIView {
         
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addConfetti()
     }
     
     
     // MARK: Confetti Methods
-    func addConfetti() {
+    private func addConfetti() {
         self.confettiLayers.append(ConfettiLayer(view: self))
         self.confettiLayers.append(ConfettiLayer(view: self, depth: 1.5))
         self.confettiLayers.append(ConfettiLayer(view: self, depth: 2))
@@ -42,15 +44,27 @@ class ConfettiView: UIView {
     
     
     // MARK: Touches
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override  open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override  open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override  open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
     
+    // MARK: Controls
     
+    /// Stops the animation of all layers
+    open func stopAnimating() {
+        isAnimating = false
+        confettiLayers.forEach { layer in layer.invalidateTimer() }
+    }
+    
+    open func startAnimating() {
+        guard isAnimating == false else { return }
+        isAnimating = true
+        confettiLayers.forEach { layer in layer.setupTimerLoop() }
+    }
     
     
 }

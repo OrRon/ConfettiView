@@ -10,23 +10,37 @@ import Foundation
 import UIKit
 import CoreMotion
 
+
+///Manages ShapeViews on a certain designated UIView
 class ConfettiLayer {
     
     let view:UIView
+    var timer:Timer? = nil
     
+    var motionManager = CMMotionManager()
     
+    //UIDynamic animator and different Behaviors
     var animator:UIDynamicAnimator
     var itemBehavior = UIDynamicItemBehavior()
-    var motionManager = CMMotionManager()
     var collisions = UICollisionBehavior()
     
     
-    
+    // TODO: create a struct to represent the layer state
+    // Initial layer state
     var baseVelocity = CGPoint(x:0,y:200.0)
     var calculatedVelocity:CGPoint
     var totalTilt = 1.0
+    
+    ///The depth that will be simulated by this layer
     var depth:Double
     
+    
+    /**
+     Initializes a new confetti layer on a designated view.
+     - Parameters:
+        - view: The target view where the confetti will be added
+        - depth: Simulates depth feeling using size and speed. Default = 1.0
+     */
     init(view aView:UIView, depth aDepth:Double = 1.0) {
         view = aView
         animator = UIDynamicAnimator(referenceView: view)
@@ -38,11 +52,13 @@ class ConfettiLayer {
             motionManager.startAccelerometerUpdates()
         }
         
-        setupBehiviors()
+        setupBehaviors()
         setupTimerLoop()
     }
     
-    func setupBehiviors() {
+    
+    ///Setting up the UIDynamic behaviors
+    func setupBehaviors() {
         
         collisions.collisionMode = .boundaries
         resetBounderies()
@@ -66,8 +82,11 @@ class ConfettiLayer {
     
     func setupTimerLoop() {
         
-        Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.onTimeTic), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.onTimeTic), userInfo: nil, repeats: true)
         
+    }
+    func invalidateTimer() {
+        timer?.invalidate()
     }
     
     @objc func onTimeTic()  {
