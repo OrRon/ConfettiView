@@ -25,12 +25,14 @@ open class ConfettiView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.clear
         addConfetti()
         
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clear
         addConfetti()
     }
     
@@ -64,6 +66,26 @@ open class ConfettiView: UIView {
         guard isAnimating == false else { return }
         isAnimating = true
         confettiLayers.forEach { layer in layer.setupTimerLoop() }
+    }
+    
+    open func snapShot() {
+        UIGraphicsBeginImageContext(self.frame.size);
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        let data = UIImagePNGRepresentation(image!)
+        let file = "\(NSDate()).png"
+        if let dir = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true).first {
+            let path = NSURL(fileURLWithPath: dir).appendingPathComponent(file)
+            print(path)
+            //writing
+            do {
+                try data?.write(to: path!)
+            }
+            catch {/* error handling here */}
+            
+           
+        }
     }
     
     

@@ -19,23 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-G6-6zw" customClass="ConfettiView" customModule="ConfettiView">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyt-KF-AKi">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="bSe-Md-b4M"/>
-                                            <constraint firstAttribute="width" constant="116" id="v8O-fs-Gm3"/>
-                                        </constraints>
-                                        <state key="normal" title="stopAnimating()"/>
-                                        <connections>
-                                            <action selector="stopConfetti:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adN-Zh-YFX"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Cyt-KF-AKi" secondAttribute="bottom" constant="180" id="9HB-7T-gBr"/>
-                                    <constraint firstItem="Cyt-KF-AKi" firstAttribute="centerX" secondItem="Q4Y-G6-6zw" secondAttribute="centerX" id="abz-qE-UDl"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2z-9a-BBN">
                                 <string key="text">This is
@@ -44,6 +28,14 @@ Confetti View 🎊🎉</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yho-ma-pN5">
+                                <frame key="frameInset" minX="101" minY="318" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Snap shopt"/>
+                                <connections>
+                                    <action selector="snap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YFp-TX-GjT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

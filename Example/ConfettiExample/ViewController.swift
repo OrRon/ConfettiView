@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func snap(_ sender: AnyObject) {
+        confettiView.snapShot()
+    }
 
 }
 
