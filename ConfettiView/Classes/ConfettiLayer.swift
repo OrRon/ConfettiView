@@ -97,7 +97,6 @@ class ConfettiLayer {
     }
     
     func updateCurrentState(_ accelerometerData:CMAccelerometerData?)  {
-        print(self.view.subviews.count)
         //Calculating the new velocity of the items according to the tilt of the device
         if let accelerometerData = accelerometerData {
             self.totalTilt = -accelerometerData.acceleration.y
