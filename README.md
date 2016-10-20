@@ -37,7 +37,7 @@ confettiView.stopAnimating()
 confettiView.startAnimating()
 ```
 
-Check weather the animation is active:
+Check whether the animation is active:
 ```swift
 confettiView.isAnimating
 ```
