@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documentd in this file.
 
+## [0.1.7] - 2016-11-14
+### Added
+- Small bug fix
+
 ## [0.1.6] - 2016-10-10
 ### Added
 - Stop and Start animation methods

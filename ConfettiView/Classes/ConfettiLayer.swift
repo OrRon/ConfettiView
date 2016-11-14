@@ -125,7 +125,7 @@ class ConfettiLayer {
         //Add particle in dependency to the tilt of the device to more tilted it is less chance to add another partical
         let chance = Double(arc4random_uniform(UInt32(100)))
         if  chance < self.totalTilt * 80 {
-            let randX = Int(arc4random_uniform(UInt32(380)))
+            let randX = Int(arc4random_uniform(UInt32(view.frame.width)))
             self.addParticle(at: CGPoint(x: randX, y: -50))
         }
     }
