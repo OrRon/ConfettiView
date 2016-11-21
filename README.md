@@ -56,6 +56,7 @@ pod "ConfettiView"
 ## Author
 
 Or Ron, or.ron10@gmail.com
+
 [@or_ron](https://twitter.com/or_ron)
 
 ## License
