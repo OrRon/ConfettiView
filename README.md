@@ -2,6 +2,7 @@
 ![](http://i.imgur.com/kQqv0mb.png)
 
 [![Version](https://img.shields.io/cocoapods/v/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://swift.org/)
 [![Platform](https://img.shields.io/cocoapods/p/ConfettiView.svg?style=flat)](http://cocoapods.org/pods/ConfettiView)
@@ -46,11 +47,17 @@ By default the animation starts when the view is initialized
 
 ## Installation
 
-ConfettiView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+ConfettiView is available through [CocoaPods](http://cocoapods.org) and  [Carthage](https://github.com/Carthage/Carthage).
+
+To install:
+Using CocoaPods simply add the following line to your Podfile:
 
 ```ruby
 pod "ConfettiView"
+```
+Using Carthage add the following to your Cartfile:
+```ruby
+github "OrRon/ConfettiView"
 ```
 
 ## Author
