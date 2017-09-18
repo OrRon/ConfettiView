@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059E63741F705FA000945630 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		05C721421F5F54980065894F /* ConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C721451F5F54980065894F /* ConfettiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfettiView.h; sourceTree = "<group>"; };
 		05C721461F5F54980065894F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		05C721441F5F54980065894F /* ConfettiView */ = {
 			isa = PBXGroup;
 			children = (
+				059E63741F705FA000945630 /* README.md */,
 				05C721531F5F550F0065894F /* Classes */,
 				05C721451F5F54980065894F /* ConfettiView.h */,
 				05C721461F5F54980065894F /* Info.plist */,
