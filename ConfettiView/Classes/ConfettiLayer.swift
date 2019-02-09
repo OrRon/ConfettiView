@@ -135,7 +135,7 @@ class ConfettiLayer {
         
         self.view.addSubview(shapeView)
         let precentage =  Double(arc4random_uniform(UInt32(101)))/100.0
-        shapeView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI*precentage))
+        shapeView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi*precentage))
         
         collisions.addItem(shapeView)
         itemBehavior.addItem(shapeView)
@@ -143,7 +143,7 @@ class ConfettiLayer {
         let spin = Int(arc4random_uniform(UInt32(100)))
         
         if spin > 80 {
-            itemBehavior.addAngularVelocity(CGFloat(M_PI), for: shapeView)
+            itemBehavior.addAngularVelocity(CGFloat(Double.pi), for: shapeView)
         }
         
     }
